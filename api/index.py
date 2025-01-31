@@ -9,7 +9,7 @@ with open (file_path,'r') as file:
     data=json.load(file)
 
 marks = dict()
- for i in range (len(data)):
+for i in range (len(data)):
      marks[data[i]['name']] = data[i]['marks']
 
 
