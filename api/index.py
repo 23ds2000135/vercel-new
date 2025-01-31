@@ -32,5 +32,5 @@ class handler(BaseHTTPRequestHandler):
         response = {
             "marks":query_marks,
         }
-        self.wfile.write(json.dumps({"message": "Hello!"}).encode('utf-8'))
+        self.wfile.write(json.dumps (response).encode('utf-8'))
         return
