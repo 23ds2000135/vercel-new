@@ -2,7 +2,7 @@
 # api/index.py
 import json
 from http.server import BaseHTTPRequestHandler
-import urlib.parse
+import urllib.parse
 
 file_path='api/q-vercel-python.json'
 with open (file_path,'r') as file:
@@ -15,8 +15,8 @@ for i in range (len(data)):
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        parsed_url = url.lib.parse.urlparse(self.path)
-        query_params = url.lib.parse.parse_qs(parsed_url.query)
+        parsed_url = urllib.parse.urlparse(self.path)
+        query_params = urllib.parse.parse_qs(parsed_url.query)
         names = query_params.get('name',[])
 
         query_marks = list ()
